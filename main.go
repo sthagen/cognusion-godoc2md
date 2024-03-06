@@ -257,9 +257,8 @@ func main() {
 func writeOutput(w io.Writer, fs vfs.NameSpace, pres *godoc.Presentation, args []string, packageText *template.Template) error {
 	path := args[0]
 	cmdMode := strings.HasPrefix(path, cmdPathPrefix)
-	if strings.HasPrefix(path, srcPathPrefix) {
-		path = strings.TrimPrefix(path, srcPathPrefix)
-	}
+	path = strings.TrimPrefix(path, srcPathPrefix)
+
 	var abspath, relpath string
 	if cmdMode {
 		path = strings.TrimPrefix(path, cmdPathPrefix)

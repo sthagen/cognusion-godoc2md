@@ -158,7 +158,7 @@ Context represents a request context. Services can be mapped on the request leve
 type Handler interface{}
 ```
 Handler can be any callable function. Martini attempts to inject services into the handler's argument list.
-Martini will panic if an argument could not be fullfilled via dependency injection.
+Martini will panic if an argument could not be fulfilled via dependency injection.
 
 
 
