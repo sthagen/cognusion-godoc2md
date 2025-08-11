@@ -17,7 +17,6 @@ import (
 	"go/ast"
 	"go/build"
 	"io"
-	"io/ioutil"
 	"log"
 	"os"
 	pathpkg "path"
@@ -238,7 +237,7 @@ func main() {
 	var tmpl *template.Template
 
 	if *altPkgTemplate != "" {
-		buf, err := ioutil.ReadFile(*altPkgTemplate)
+		buf, err := os.ReadFile(*altPkgTemplate)
 		if err != nil {
 			log.Fatal(err)
 		}
